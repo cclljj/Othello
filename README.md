@@ -7,7 +7,7 @@
 ![Powered By](https://img.shields.io/badge/Powered%20By-AntiGravity%20%26%20Gemini%203%20Pro-purple)
 
 > This project was created by **Ling-Jyh Chen** using **AntiGravity** and the **Gemini 3 Pro** model.
-> 本專案由 **陳伶志 (Ling-Jyh Chen)** 使用 **AntiGravity** 與 **Gemini 3 Pro** 模型開發。
+> 本專案由 **Ling-Jyh Chen** 使用 **AntiGravity** 與 **Gemini 3 Pro** 模型開發。
 
 [English](#english) | [繁體中文](#繁體中文)
 
