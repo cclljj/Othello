@@ -1,0 +1,24 @@
+[2025-12-15] User Prompt Log
+
+1. Project Initialization
+   - "You are a Senior Python Full-Stack Developer proficient in the 'Antigravity' web framework. Your task is to build a fully functional, web-based Othello (Reversi) game..."
+
+2. Initial Documentation
+   - "please make the README.md, including how to run this program."
+
+3. Debugging: Server Startup
+   - Addressed issues: "there are errors when I run python3 main.py", "Error response code 404", and "OSError: [Errno 48] Address already in use".
+
+4. Debugging: Game Logic & UI
+   - Addressed issues: "it always show 'Error making move'", "AttributeError: 'OthelloHandler' object has no attribute 'serve_file'", and "Error making move: Cannot set properties of null".
+
+5. Project Refinement
+   - "please update README"
+   - "please add .gitignore and ignore non-necessary files"
+
+6. Finalizing Documentation (License & Attribution)
+   - "please add MIT license... include both English and Traditional Chinese contents... add some badges..."
+   - "The copywrite should belong to me (Ling-Jyh Chen)..."
+
+7. Meta
+   - "please add a prompts.log to put all logs of my prompts to AI" (Merged with refinement request)
