@@ -1,0 +1,207 @@
+:root {
+    --bg-color: #1a1a2e;
+    --board-color: #2e7d32;
+    --board-border: #1b5e20;
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --text-color: #ffffff;
+    --accent-color: #e94560;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.score-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.score-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.disc-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.disc-icon.black { background: #111; border: 1px solid #555; }
+.disc-icon.white { background: #eee; }
+
+.player-name { font-weight: 600; }
+.score-value { font-weight: 800; font-size: 1.2rem; }
+
+.board-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: var(--board-color);
+    padding: 10px;
+    gap: 2px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 50px rgba(0,0,0,0.2);
+    border: 4px solid var(--board-border);
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+}
+
+.cell {
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Valid move marker */
+.cell.valid::after {
+    content: '';
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.cell.valid:hover::after {
+    transform: scale(1.5);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Disc Styles */
+.disc {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.3s ease-out;
+    position: relative;
+}
+
+.disc::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+}
+
+.disc.black {
+    background: radial-gradient(circle at 30% 30%, #444, #000);
+}
+
+.disc.white {
+    background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.btn.primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 10px;
+    background: rgba(233, 69, 96, 0.2);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    color: #ffadb8;
+    animation: fadeIn 0.3s ease;
+}
+
+.hidden { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 450px) {
+    .board {
+        gap: 1px;
+        padding: 5px;
+    }
+}
