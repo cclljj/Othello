@@ -1,4 +1,4 @@
-# Antigravity Othello (Black-White Chess)
+# Antigravity Othello
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
@@ -39,7 +39,7 @@ A modern, web-based Othello (Reversi) game built with a **zero-dependency** Pyth
 
 1.  **Open a terminal** in the project directory:
     ```bash
-    cd /path/to/Black-White-Chess
+    cd /path/to/Othello
     ```
 
 2.  **Start the server**:
@@ -95,7 +95,7 @@ A modern, web-based Othello (Reversi) game built with a **zero-dependency** Pyth
 
 1.  **開啟終端機** 並進入專案目錄：
     ```bash
-    cd /path/to/Black-White-Chess
+    cd /path/to/Othello
     ```
 
 2.  **啟動伺服器**：
